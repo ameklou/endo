@@ -10,7 +10,7 @@ const MapComponent =  () => {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-      fetch('http://localhost:3000/api/projects')
+      fetch('https://dev.yeevii.com/api/projects')
         .then((res) => {
           console.log(res)
           return res.json();

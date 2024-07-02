@@ -8,6 +8,7 @@ export const GET = async () => {
 
   const data = await payload.find({
     collection: 'users',
+    overrideAccess:false
   })
 
   return Response.json(data)

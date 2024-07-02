@@ -123,6 +123,11 @@ export interface Project {
     [k: string]: unknown;
   };
   organisation: string | Organisation;
+  /**
+   * @minItems 2
+   * @maxItems 2
+   */
+  location?: [number, number] | null;
   medias: (string | Media)[];
   createdBy?: (string | null) | User;
   updatedAt: string;

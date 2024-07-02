@@ -11,6 +11,8 @@ import { Media } from './collections/Media'
 import Countries from '@/collections/Countries'
 import Organisations from '@/collections/Organisations'
 import Projects from '@/collections/Projects'
+import { slateEditor } from '@payloadcms/richtext-slate'
+import MapComponent from '@/components/MapComponent'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -18,6 +20,14 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   admin: {
     user: Users.slug,
+    components:{
+      views:{
+        map:{
+          Component:MapComponent,
+          path:'/map'
+        }
+      }
+    }
   },
   collections: [Users, Media, Countries, Organisations, Projects],
   editor: lexicalEditor(),

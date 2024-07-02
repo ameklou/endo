@@ -35,6 +35,11 @@ const projects :CollectionConfig={
       required: true,
     },
     {
+      name: 'location',
+      type: 'point',
+      required: true,
+    },
+    {
       name:'medias',
       type: 'relationship',
       relationTo:'media',
@@ -50,6 +55,7 @@ const projects :CollectionConfig={
         update:isAdminOrStaffField,
         read:isAdminOrStaffField,
       },
+
       admin: {
         // readOnly: true,
         position: 'sidebar',

@@ -54,7 +54,7 @@ export const Users: CollectionConfig = {
       label:'Country',
       type:'relationship',
       relationTo:'countries',
-      required: true,
+
       admin:{
         position:'sidebar'
       },
@@ -69,7 +69,6 @@ export const Users: CollectionConfig = {
       label:'Organisations',
       type:'relationship',
       relationTo:'organisations',
-      required:true,
       hasMany:true,
       admin:{
         position:'sidebar'
